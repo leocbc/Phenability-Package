@@ -14,11 +14,11 @@ Version: \tab 2.0\cr
 Date: \tab 2015-02-24\cr
 License: \tab GPU-3\cr
 }
-The package can be applied to MET (multienvironment trials) data containing the phenotypic mean of genotype x environment (dataframe with genotypes by rows and environments into columns) and performs nonparametric analysis according to for criteria: Huehn (1979), and Nassar and Huehn (1987); Kang's (1988); Fox et al. (1990) and; Thennarasu's (1995).
+The package can be applied to MET (multienvironment trials) data containing the phenotypic mean of genotype x environment (dataframe with genotypes by rows and environments into columns) and performs nonparametric analysis according to for criteria: Hühn (1979), and Nassar and Hühn (1987); Kang's (1988); Fox et al. (1990) and; Thennarasu's (1995).
 }
 
 \arguments{
-  \item{function}{ nahu, kang, fox, or thsu}
+  \item{function}{nahu, kang, fox, or thsu}
   \item{data}{ A numeric data.frame with fenotypic means values of MET, and genotypes and environments by rows and columns, respectively.}
   \item{interaction}{do a interaction plot or not (FALSE = no interaction plot output, TRUE = draws a interaction plot between genotypes and environments).}
 }
@@ -53,7 +53,7 @@ Fox, P.N., B. Skovmand, B.K. Thompson, H.J. Braun, and R. Cormier.
 1990. Yield and adaptation of hexaploid spring triticale. Euphytica
 47:57.\cr
 
-Huehn, V.M. 1979. Beitrage zur erfassung der phanotypischen
+Hühn, V.M. 1979. Beitrage zur erfassung der phanotypischen
 stabilitat. EDV Med. Biol. 10:112.\cr
 
 Kang, M.S. 1988. A ranksum method for selecting high yielding,
@@ -66,7 +66,7 @@ Rev. 12:271.\cr
 Lin, C.S., M.R. Binns, and L.P. Lefkovitch. 1986. Stability analysis:
 Where do we stand? Crop Sci. 26:894.\cr
 
-Nassar, R., and M. Huehn. 1987. Studies on estimation of phenotypic
+Nassar, R., and M. Hühn. 1987. Studies on estimation of phenotypic
 stability: Tests of significance for nonparametric measures of
 phenotypic stability. Biometrics 43:45.\cr
 
