@@ -21,10 +21,10 @@ Is returned a list with "ranksum" value by genotype, the ranking for the respons
 }
 \references{
 Kang, M.S. 1988. A ranksum method for selecting high yielding,
-stable corn genotypes. Cereal Res. Comm. 16:113-115.\cr
+stable corn genotypes. Cereal Res. Comm. 16:113.\cr
 
 Shukla, G.K. 1972. Some aspects of partitioning genotype environmental
-components of variability. Heredity 28:237-245.
+components of variability. Heredity 28:237.
 }
 \author{
 Leonardo Castelo Branco

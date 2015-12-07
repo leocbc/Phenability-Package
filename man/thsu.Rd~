@@ -4,7 +4,7 @@
 Thennarasu Function
 }
 \description{
-Performs a stability analysis according to Thennarasu (1995) methodology. Therefore the statistics NP1, NP2, NP3, NP4 are presented in output. 
+Performs a stability analysis according to Thennarasu (1995) methodology. Therefore the statistics N1, N2, N3, N4 are presented in output. 
 }
 \usage{
 thsu(data, interaction=FALSE)
@@ -17,7 +17,7 @@ thsu(data, interaction=FALSE)
 
 
 \value{
-Is returned a list with four numerical statistics values (NP1, NP2, NP3, and NP4) by genotype, the ranking for the response variable in each environment, and the Spearman correlation matrix between environments.
+Is returned a list with four numerical statistics values (N1, N2, N3, and N4) by genotype, the ranking for the response variable in each environment, and the Spearman correlation matrix between environments.
 }
 \references{
 Thennarasu, K. 1995. On certain nonparametric procedures for

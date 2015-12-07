@@ -23,10 +23,10 @@ Is returned a list with four numerical statistics values (S1, S2, S3, and S6) by
 \references{
 Nassar, R., and M. Hühn. 1987. Studies on estimation of phenotypic
 stability: Tests of significance for nonparametric measures of
-phenotypic stability. Biometrics 43:45-53.\cr
+phenotypic stability. Biometrics 43:45.\cr
 
 Hühn, V.M. 1979. Beitrage zur erfassung der phanotypischen
-stabilitat. EDV Med. Biol. 10:112-117.
+stabilitat. EDV Med. Biol. 10:112.
 }
 \author{
 Leonardo Castelo Branco
