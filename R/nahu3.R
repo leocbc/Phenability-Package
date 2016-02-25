@@ -11,52 +11,49 @@ nahu3 <-
     S2 <- numeric()
     S3 <- numeric()
     S6 <-  numeric()
-    S.1 <- matrix(NA,a,b)
+    S.1 <- matrix(NA,a,b-1)
     S1 <- numeric()
     k <-  2
     
-    for (i in 1:nrow(data.m)){
-      for(j in 1:ncol(data.m)){
-        data.r[i,j] <- (data.m[i,j]) - (mean(data.m[i,]))+(mean(data.m))
-      }
-    }
     ranks <- matrix(NA,a,b)
-    
-    for (j in 1:ncol(data.r)){
-      
-      ranks[,j] <- rank(data.r[,j])
-    }
-    
-    ranks.y <- matrix(NA,a,b)
     
     for (j in 1:ncol(data.m)){
       
-      ranks.y[,j] <- rank(data.m[,j])
+      ranks[,j] <- rank(-data.m[,j])
     }
     
     r.means <- rowMeans(ranks)
-    r.means.y <- rowMeans(ranks.y)
-    
     for (i in 1:nrow(data)){
       for (j in 1:ncol(data)){
         S2.1[i,j] <- (ranks[i,j]-r.means[i])^2
-        S3.1[i,j] <- abs(ranks[i,j]-r.means[i])
+        S3.1[i,j] <- abs(ranks[i,j]-r.means[i])^2
         S6.1[i,j] <- abs(ranks[i,j]-r.means[i])
-      }
+    }
       S2[i]<-round(((sum(S2.1[i,])) / (b-1)),digits=4)
       S3[i]<-round((sum(S3.1[i,]) / (r.means[i])),digits=4)
       S6[i]<-round((sum(S6.1[i,])) / (r.means[i]),digits=4)
     }
-    for (i in 1:nrow(data)){
-      for (j in 1:(b-1)){
-        
-        S.1[i,j] <- (abs(ranks[i,j] - ranks[i,k])) / (b*(b-1))
-        while(k < b)
-          k <- k + 1
+#Verificar
+     
+    for(i in 1:a){
+      for(j in 1:b-1){
+        S.1[i,j] <- abs(ranks[i,j]-ranks[i,j+1])
       }
-      S1[i] <- round((2*(sum(S.1[i,j]))), digits = 4)
-      
     }
+    
+    S1<- (apply(S.1, 1, sum))/((b*(b-1))/2)
+# S1 Alternativo
+    for(i in 1:a){
+      for(j in 1:b-1){
+        for(k in 2:b){
+        S.1[i,j] <- abs(ranks[i,j]-ranks[i,k])
+        }
+      }
+    }
+    
+    S1<- (apply(S.1, 1, sum))/((b*(b-1))/2)
+    
+    
     
     means <- round(as.numeric(rowMeans(data)),digits=4)
     result <- as.data.frame(cbind(rownames(data),means,S1,S2,S3,S6))
@@ -83,8 +80,7 @@ nahu3 <-
                        col = 1:nrow(data),xpd = NULL,xtick = F,cex.axis = 0.6,
                        ylab="Response", 
                        xlab="Environment")
-      
-    }
+     }
     
     s1 <- as.numeric(result[,3])
     s2 <- as.numeric(result[,4])
